@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	double X, x, Y, y, lenf,ac,bc,sum, a, b, c, sh, dl,p,s,ab, xa,xb,xc,ya,yb,yc,pm,A,B,C;
+	cout << "первый номер" << endl;
+	cout << "введите координаты в порядке (x1, y1) и (x2, y2)" << endl;
+	cin >> X >> Y >> x >> y;
+	lenf = pow(((X - x) * (X - x) + (Y - y) * (Y - y)), 0.5);
+	cout << "расстояние между точками равно " << lenf << endl << "конец первого номера" << endl;
+
+	cout << "второй номер" << endl;
+	cout << "введите координаты точек в порядке А, В, С" << endl;
+	cin >> a >> b >> c;
+	ac = abs(a - c);
+	bc = abs(b - c);
+	sum = ac + bc;
+	cout << "AC=" << ac << "BC=" << bc << "сумма " << sum << endl << "конец второго номера" << endl;
+
+	cout << "третий номер" << endl;
+	cout << "введите координаты точек" << endl;
+	cin >> a >> b >> c;
+	A = (a < b&& a < c) ? a : (b < c) ? b : c;
+	B = (a > b && a > c) ? a : (b > c) ? b : c;
+	C = (a > A && a < B) ? a : (b > A && b < B) ? b : c;
+	ac = c - a;
+	bc = b - c;
+	cout << "Произведение длин отрезков равно " << ac * bc << endl;
+
+	cout << "четвертый номер" << endl;
+	cout << "введите координаты двух противоположных вершин прямоугольника в порядке (x1, y1) и (x2, y2)" << endl;
+	cin >> X >> Y >> x >> y;
+	sh = abs(X - x);
+	dl = abs(Y - y);
+	p = 2 * (sh + dl);
+	s = sh * dl;
+	cout << "периметр прямоугольника равен " << p << endl << "площадь прямоугольника равна " << s << endl;
+
+	cout << "пятый номер" << endl;
+	cout << "введите координаты точки А" << endl;
+	cin >> xa >> ya ;
+	cout << "введите координаты точки В" << endl;
+	cin >> xb >> yb;
+	cout << "введите координаты точки С" << endl;
+	cin >> xc >> yc;
+	ab= pow((((xb - xa) * (xb - xa)) + ((yb - ya) * (yb - ya))), 0.5);
+	cout << ab << endl;
+	bc= pow((((xb - xc) * (xb - xc)) + ((yb - yc) * (yb - yc))), 0.5);
+	cout << bc << endl;
+	ac= pow((((xc - xa) * (xc- xa)) + ((yc- ya) * (yc- ya))), 0.5);
+	cout << ac << endl;
+	p = ab + bc + ac;
+	pm = p / 2;
+	s = pow((pm * (pm - ac) * (pm - bc) * (pm - ab)), 0.5);
+	cout << "периметр равен " << p << endl << "площадь равна " << s << endl;
+
+	
+
+
+	
+
+
+
+}

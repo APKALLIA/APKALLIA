@@ -1,59 +1,61 @@
+
+
 #include <iostream>
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "rus");
-	double X, x, Y, y, lenf, ac, bc, sum, a, b, c, sh, dl, p, s, ab, xa, xb, xc, ya, yb, yc, pm, A, B, C;
-	cout << "первый номер" << endl;
-	cout << "введите координаты в порядке (x1, y1) и (x2, y2)" << endl;
-	cin >> X >> Y >> x >> y;
-	lenf = pow(((X - x) * (X - x) + (Y - y) * (Y - y)), 0.5);
-	cout << "расстояние между точками равно " << lenf << endl << "конец первого номера" << endl;
-	cout << "" << endl;
-	cout << "второй номер" << endl;
-	cout << "введите координаты точек в порядке А, В, С" << endl;
-	cin >> a >> b >> c;
-	ac = abs(a - c);
-	bc = abs(b - c);
-	sum = ac + bc;
-	cout << "AC=" << ac << "BC=" << bc << "сумма " << sum << endl << "конец второго номера" << endl;
-	cout << "" << endl;
-	cout << "третий номер" << endl;
-	cout << "введите координаты точек" << endl;
-	cin >> a >> b >> c;
-	if ((a> c) and (c> b) or  (a< c) and ( c < b))
-	{
-		cout << "произведение отрезков равно " << abs(a - c) * abs(b - c) << endl;
-	}
-	else
-	{
-		cout << "Точка находится вне пределов точек A и B" << endl;
-	}
-	cout << "" << endl;
-	cout << "четвертый номер" << endl;
-	cout << "введите координаты двух противоположных вершин прямоугольника в порядке (x1, y1) и (x2, y2)" << endl;
-	cin >> X >> Y >> x >> y;
-	sh = abs(X - x);
-	dl = abs(Y - y);
-	p = 2 * (sh + dl);
-	s = sh * dl;
-	cout << "периметр прямоугольника равен " << p << endl << "площадь прямоугольника равна " << s << endl;
-	cout << "" << endl;
-	cout << "пятый номер" << endl;
-	cout << "введите координаты точки А" << endl;
-	cin >> xa >> ya;
-	cout << "введите координаты точки В" << endl;
-	cin >> xb >> yb;
-	cout << "введите координаты точки С" << endl;
-	cin >> xc >> yc;
-	ab = pow((((xb - xa) * (xb - xa)) + ((yb - ya) * (yb - ya))), 0.5);
-	cout << ab << endl;
-	bc = pow((((xb - xc) * (xb - xc)) + ((yb - yc) * (yb - yc))), 0.5);
-	cout << bc << endl;
-	ac = pow((((xc - xa) * (xc - xa)) + ((yc - ya) * (yc - ya))), 0.5);
-	cout << ac << endl;
-	p = ab + bc + ac;
-	pm = p / 2;
-	s = pow((pm * (pm - ac) * (pm - bc) * (pm - ab)), 0.5);
-	cout << "периметр равен " << p << endl << "площадь равна " << s << endl;
+	setlocale(LC_ALL, "ru");
+	double a, b, v1, v2, s, t, c, min, max, nok,  a1, a2, b1, b2, AA2, c1, c2, B2, C2, A2, del, del1, del2;
+	double y, x;
+	double maxchislo = 0;
+	const float pi = 3.14;
+	cout << "№ 1" << endl;
+	cout << "Введите количество градусов" << endl;
+	cout << "X = "; cin >> x;
+	cout << "Количество радиан: " << x << " * 3.14 / 180 = " << x * pi / 180 << endl;
+	cout << "_____________________________________________________________________________" << endl;
+	cout << "№ 2" << endl;
+	cout << "Введите количество радиан" << endl;
+	cout << "X = ";
+	cin >> x;
+	cout << "Количество градусов: " << x << "* 180 / 3.14 = " << x / pi * 180 << endl;
+	cout << "_____________________________________________________________________________" << endl;
+	cout << "№ 3" << endl;
+	cout << "X КГ конфет стоит  ";
+	cin >> a;
+	cout << "Введите количество Кг ";
+	cin >> x;
+	cout << "один кг стоит " << a / x << endl;
+	cout << "введите кол-во кг" << endl;
+	cin >> y;
+	cout << y << " Кг конфет стоит: " << y * (a/x) << endl;
+	cout << "_____________________________________________________________________________" << endl;
+	cout << "№ 4" << endl;
+	cout << "скорость первого автомобиля = "; cin >> v1;
+	cout << "скорость второго автомобиля = "; cin >> v2;
+	cout << "скорость отдаления: v1 + v2 = " << v1 + v2 << endl;
+	cout << "Расстояние между машинами(км) = "; cin >> s;
+	cout << "количество часов удаления: "; cin >> t;
+	cout << "расстояние между ними через " << t << " часов = " << s + t * (v1 + v2) << " км" << endl;
+	cout << "_____________________________________________________________________________" << endl;
+	cout << "№ 5" << endl;
+	cout << "введите коэфф. A и B" << endl;
+	cout << "A = "; cin >> a;
+	cout << "B = "; cin >> b;
+	cout << a << "X + " << b << " = " << -(b / a) << endl;
+	cout << "_____________________________________________________________________________" << endl;
+	cout << "№ 6" << endl;
+	cout << "A1 = "; cin >> a1; 
+	cout << "A2 = "; cin >> a2; 
+	cout << "B1 = "; cin >> b1;
+	cout << "B2 = "; cin >> b2; 
+	cout << "C1 = "; cin >> c1;
+	cout << "C2 = "; cin >> c2; 
+
+	del = a1 * b2 - a2 * b1;
+	del1 = c1 * b2 - c2 * b1;
+	del2 = a1 * c2 - a2 * c1;
+	cout << "x равен" << del1 / del << endl;
+	cout << "y равен" << del2 / del << endl;
+	return 0;
 }

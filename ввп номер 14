@@ -29,7 +29,8 @@ int fib(int n) {
 }
 int main()
 {
-    int a, b, N, k, proc;
+    int a, b, N, k;
+    float proc;
     setlocale(LC_ALL, "ru");
     cout << "Номер 1\n";
     cout << "Введите a: ";
@@ -81,15 +82,15 @@ int main()
         system("pause");
         return 1;
     }
-    double deposit = 1000;
+    float deposit = 1000;
     int count = 0;
     while (deposit < 1100)
     {
-        deposit += deposit / proc;
+        deposit += deposit * proc/100;
         count++;
     }
 
-    std::cout << "До превышения лимита вклада на сумму 1100р. понадобится " << count << " месяца " << "\nсумма вклада сомтавит " << deposit << " руб.";
+    std::cout << "До превышения лимита вклада на сумму 1100р. понадобится " << count << " месяца " << "\nсумма вклада составит " << deposit << " руб.";
     cout << "\n__________________________\n";
     cout << "Номер 5\n";
     long int A, B;

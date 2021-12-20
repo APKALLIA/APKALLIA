@@ -1,5 +1,32 @@
 #include <iostream>
 using namespace std;
+int fib(int n) {
+    int f = 0;
+    int res = 1;
+    int f0 = 1;
+    int i = 0;
+    while (i <= n) {
+        res = f;
+        f = f0 + f;
+        f0 = res;
+        i++;
+        if (n == f)
+        {
+            cout << "номер: ";
+            return i;
+        }
+    }
+    if (n == 0)
+    {
+        
+        return 0;
+    }
+    else
+    {
+        cout << "ошибка ";
+        return 404;
+    }
+}
 int main()
 {
     int a, b, N, k, proc;
@@ -26,7 +53,7 @@ int main()
     cin >> a;
     cout << "введите длинну отрезка b: \n";
     cin >> b;
-    while (a >= b)
+    while (a > b)
     {
         a -= b;
         i++;
@@ -40,8 +67,8 @@ int main()
     i = 1;
     while (i < N)
     {
-        k +=1;
-        i+=k;
+        k += 1;
+        i += k;
     }
     cout << "Наименьшее к = " << k << endl << "Сумма равна: " << i << endl;
     cout << "\n__________________________\n";
@@ -62,7 +89,7 @@ int main()
         count++;
     }
 
-    std::cout << "До превышения лимита вклада на сумму 1100р. понадобится: " << count << " месяца " << "\nсумма вклада сомтавит: " << deposit << " руб.";
+    std::cout << "До превышения лимита вклада на сумму 1100р. понадобится " << count << " месяца " << "\nсумма вклада сомтавит " << deposit << " руб.";
     cout << "\n__________________________\n";
     cout << "Номер 5\n";
     long int A, B;
@@ -80,22 +107,6 @@ int main()
     int n;
     cout << "Введите число Фибоначчи: \n";
     cin >> n;
-    int f = 0;
-    int res = 1;
-    int f0 = 1;
-    i = 0;
-    while (i <= n) {
-        res = f;
-        f = f0 + f;
-        f0 = res;
-        i++;
-        if (n == f)
-            return i;
-    }
-    if (n == 0)
-        return 0;
-    else
-    {
-        cout << "это не число фибоначчи";
-    }
+    cout << fib(n);
+    return 0;
 }

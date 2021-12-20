@@ -15,21 +15,25 @@ int main()
     {
         arr[i] = i+1;
     }
+    cout << "массив: ";
     for (int m = 0; m < N; m++)
     {
         cout << arr[m] << " ";
     }
     cout << "\n";
+    cout << "числа: ";
     for (i = K; i <= L;i++)
     {
         a += arr[i];
         cout << arr[i]<< ' ';
     }
+    cout << "\nсреднее арифметическое чисел: ";
     cout << "\n";
     avg = a / (L - K + 1);
     cout << avg << endl;
     cout << "_________________________________________\n";
     cout << "#2\n";
+    cout << "массив: ";
     int ar[] = {0, 3, 6, 9, 12, 15};
     for (int m = 0; m < 6; m++)
     {

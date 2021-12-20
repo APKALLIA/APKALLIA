@@ -84,7 +84,7 @@ int main()
     }
     float deposit = 1000;
     int count = 0;
-    while (deposit < 1100)
+    while (deposit <= 1100)
     {
         deposit += deposit * proc/100;
         count++;
